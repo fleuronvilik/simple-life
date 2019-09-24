@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Start to think responsively">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora|Ubuntu:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <div class="container container-flex">
+	      <div>
+          <h1>Living the simple life</h1>
+	        <div>A blog exploring minimalism in life</div>
+        </div>
+        
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="recent.html">Recent Post</a></li> 
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container container-flex">
+	{{ content }}
+    </div>
+
+    <footer>
+      <div>Living the simple life</div>
+      <div>Copyright 2019</div>
+    </footer>
+  </body>
+</html>

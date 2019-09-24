@@ -1,0 +1,23 @@
+{% if page.featured %}
+  {% assign begin = 0 %}
+{% else %}
+  {% assign begin = 1 %}
+{% endif %}
+
+{% for post in site.data.posts offset:begin %}
+  <article class="post">
+
+    <div class="post-body">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+      <a class="more" href="#">continue reading</a>
+    </div>
+
+    <div class="post-thumb">
+      <img src="/assets/img/{{ post.image }}" alt="">
+      <div class="post-info">{{ post.info }}</div>
+    <div>
+
+  </article>
+{% endfor %}
+

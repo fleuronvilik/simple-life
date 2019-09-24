@@ -1,0 +1,249 @@
+$lora: 'Lora', serif;
+$ubuntu: 'Ubuntu', sans-serif;
+
+/* General */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $ubuntu;
+  font-size: 18px;
+  color: #707070;
+}
+
+header {
+  margin-bottom: 3em;
+  background-color: #F8F8F8;
+}
+
+@media (max-width: 768px) {
+  header div {
+    text-align: center;
+  }
+}
+
+footer {
+  margin-top: 3em;
+  padding: 2em 0;
+  background-color: #143774;
+  text-align: center;
+  color: #fff;
+}
+
+footer div {
+  opacity: 54%;
+}
+
+footer div:first-child {
+  font-weight: 700;
+}
+
+h1, h2, h3 {
+  font-family: $lora;
+  font-weight: normal;
+  color: #143774;
+}
+
+h1, .widget-title { //, h2
+  margin: 0;
+}
+
+h1 + div {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1792D2;
+}
+
+img {
+  width: 100%; // Previously max-width
+}
+
+/* Navigation and Links */
+
+nav ul {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+@media (min-width: 375px) {// Previously 550
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 1em;
+  }
+
+  li:last-child {
+    margin-right: 0;
+  }
+}
+
+ul a, .more {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+ul a {
+  color: #717171;
+}
+
+ul a:hover, ul a:focus {
+  color: #1792D2;
+}
+
+.more {
+  font-size: 14px;
+  color: #1792D2;
+}
+
+/* Layout */
+
+.container {
+  width: 90%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {//Previously 625px;
+  .container-flex {
+    flex-direction: row;
+    justify-content: space-between;
+
+    aside {
+      min-width: 25%;
+      margin-left: .5em;
+    }
+
+    section {
+      margin-bottom: 2em;
+      padding: 1em;
+      border: 1em solid #EBEBEB;
+    }
+  }
+
+  header + .container-flex {
+    align-items: flex-start;
+  }
+
+  .post h2 {
+    margin-top: 0;
+  }
+}
+
+
+/* sidebar */
+
+aside {color: #143774;}
+
+section img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.widget-about img {
+  height: 120px;
+}
+
+.widget-title { //section h2
+  font: 700 18px/28px Ubuntu;
+  text-transform: uppercase;
+}
+
+.widget-recent img {
+  order: -1;
+  margin: 1em 0;
+}
+
+.widget-recent h3 {
+  margin: 0;
+}
+
+.widget-recent div {
+  padding-bottom: 1em;
+}
+
+.widget-recent div + div {
+  border-top: 1px solid #707070;
+}
+
+/* about */
+
+.no-widget-about .widget-about {
+  display: none;
+}
+
+.about p:first-child {
+  margin-top: 0;
+}
+
+.about-title {
+  color: #1792D2;
+}
+
+/* recent posts */
+
+article,
+.widget-recent div,
+.recent article {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {//Previously 675
+  .recent article, article + article {
+    flex-direction: row;
+  }
+
+  .widget-recent img {
+    object-fit: cover;
+  }
+}
+
+.post {
+  margin-bottom: 2em;
+}
+
+.post-thumb {
+  order: -1;
+  min-width: 35%;
+  margin-right: 1em;
+}
+
+.post-info {
+  font-size: 14px;
+}
+
+@media (min-width: 550px) and (max-width: 768px) {
+  .post .post-info {
+    text-align: right;
+  }
+
+  .post .post-body {
+    margin-top: -3em;
+  }
+
+  .post img {
+    margin-bottom: .5em;
+  }
+}
+
+/* Featured Post */
+
+.has-featured-post article:first-child {
+  padding-bottom: 1em;
+  border-bottom: 1px solid #707070;
+}
+
+.has-featured-post article:first-child h2  {//tmp
+  margin: 1em 0;
+}
